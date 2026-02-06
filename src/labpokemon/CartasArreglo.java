@@ -9,6 +9,7 @@ public class CartasArreglo {
     
     public static Carta[] crearCarta(){
         Carta[] cartas = new Carta[18];
+
         cartas[0] = new CartaHija("Charmander","/resources/charmande.png");
         cartas[1] = new CartaHija("Squirtle", "/resources/squirtle.png");
         cartas[2] = new CartaHija("Bulbasaur", "/resources/bulbasaur.png");
@@ -27,6 +28,7 @@ public class CartasArreglo {
         cartas[15] = new CartaHija("Spearow", "/resources/spearow.png");
         cartas[16] = new CartaHija("Zubat", "/resources/zubat.png");
         cartas[17] = new CartaHija("Hoothoot", "/resources/hoothoot.png");        
+
        return cartas;
     };
     
