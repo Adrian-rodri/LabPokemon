@@ -27,7 +27,6 @@ public class CartasArreglo {
         cartas[15] = new CartaHija ("Spearow");
         cartas[16] = new CartaHija ("Zubat");
         cartas[17] = new CartaHija("Hoothoot");        
-        
        return cartas;
     };
     
