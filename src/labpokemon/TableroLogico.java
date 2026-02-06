@@ -12,6 +12,7 @@ public class TableroLogico implements controlarJuego {
     private Jugador jugador1;
     private Jugador jugador2;
     private Carta primeraSeleccion;
+    private Carta segundaSeleccion;
 
     public TableroLogico(Jugador j1, Jugador j2, ArrayList<Carta> cartas, int filas, int columnas){
         this.jugador1 = j1;
@@ -28,25 +29,15 @@ public class TableroLogico implements controlarJuego {
         }
     }
 
-    public boolean seleccionarCarta(int fila, int columna){
+    public void seleccionarCarta(int fila, int columna){
         Carta carta = tablero[fila][columna];
-        carta.mostrar();
+        carta.mostrarCarta();
 
         if (primeraSeleccion == null){
             primeraSeleccion = carta;
-            return false; 
         } else {
-            boolean match = primeraSeleccion.getContenido().equals(carta.getContenido());
-            if (match){
-                if (jugador1.isTurno()) jugador1.addAcierto();
-                else jugador2.addAcierto();
-            } else {
-                primeraSeleccion.ocultar();
-                carta.ocultar();
-                cambiarTurno();
-            }
-            primeraSeleccion = null; 
-            return match;
+            segundaSeleccion = carta;
+            verificarPareja(); 
         }
     }
 
@@ -57,7 +48,20 @@ public class TableroLogico implements controlarJuego {
 
     @Override
     public void verificarPareja(){
-        
+        if (primeraSeleccion != null && segundaSeleccion != null) {
+            boolean match = primeraSeleccion.getNombre().equals(segundaSeleccion.getNombre());
+            if (match){
+                if (jugador1.isTurno()) jugador1.addAcierto();
+                else jugador2.addAcierto();
+            } else {
+                primeraSeleccion.ocultarCarta();
+                segundaSeleccion.ocultarCarta();
+                cambiarTurno();
+            }
+            // reiniciamos selección
+            primeraSeleccion = null;
+            segundaSeleccion = null;
+        }
     }
 
     @Override
@@ -65,7 +69,7 @@ public class TableroLogico implements controlarJuego {
         boolean terminado = true;
         for(int f = 0; f < tablero.length; f++) {
             for(int c = 0; c < tablero[0].length; c++) {
-                if(!tablero[f][c].isDescubierta()) {
+                if(!tablero[f][c].isRevelada()) {
                     terminado = false;
                 }
             }
