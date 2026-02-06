@@ -76,8 +76,6 @@ public class Gui extends JFrame {
         add(btnJugar);
         this.setVisible(true);
     }
-    public static void main(String[] args) {
-        Gui n= new Gui();
-    }
+    
     
 }

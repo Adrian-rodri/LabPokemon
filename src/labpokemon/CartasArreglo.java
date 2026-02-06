@@ -11,27 +11,24 @@ public class CartasArreglo {
    private static Random random = new Random(); 
     public static Carta[] crearCarta(){
         Carta[] cartas = new Carta[18];
-    
-
-
-        cartas[0] = new CartaHija("Charmander", "charmander.png");
-        cartas[1] = new CartaHija("Squirtle", "squirtle.png");
-        cartas[2] = new CartaHija("Bulbasaur", "bulbasaur.png");
-        cartas[3] = new CartaHija("Pikachu", "pikachu.png");
-        cartas[4] = new CartaHija("Jigglypuff", "jigglypuff.png");
-        cartas[5] = new CartaHija("Meowth", "meowth.png");
-        cartas[6] = new CartaHija("Psyduck", "psyduck.png");
-        cartas[7] = new CartaHija("Growlithe", "growlithe.png");
-        cartas[8] = new CartaHija("Vulpix", "vulpix.png");
-        cartas[9] = new CartaHija("Magmar", "magmar.png");
-        cartas[10] = new CartaHija("Poliwag", "poliwag.png");
-        cartas[11] = new CartaHija("Staryu", "staryu.png");
-        cartas[12] = new CartaHija("Seel", "seel.png");
-        cartas[13] = new CartaHija("Lapras", "lapras.png");
-        cartas[14] = new CartaHija("Pidgey", "pidgey.png");
-        cartas[15] = new CartaHija("Spearow", "spearow.png");
-        cartas[16] = new CartaHija("Zubat", "zubat.png");
-        cartas[17] = new CartaHija("Hoothoot", "hoothoot.png");       
+        cartas[0] = new CartaHija("Charmander", "/labpokemon/charmander.png");
+        cartas[1] = new CartaHija("Squirtle", "/labpokemon/squirtle.png");
+        cartas[2] = new CartaHija("Bulbasaur", "/labpokemon/bulbasaur.png");
+        cartas[3] = new CartaHija("Pikachu", "/labpokemon/pikachu.png");
+        cartas[4] = new CartaHija("Jigglypuff", "/labpokemon/jigglypuff.png");
+        cartas[5] = new CartaHija("Meowth", "/labpokemon/meowth.png");
+        cartas[6] = new CartaHija("Psyduck", "/labpokemon/psyduck.png");
+        cartas[7] = new CartaHija("Growlithe", "/labpokemon/growlithe.png");
+        cartas[8] = new CartaHija("Vulpix", "/labpokemon/vulpix.png");
+        cartas[9] = new CartaHija("Magmar", "/labpokemon/magmar.png");
+        cartas[10] = new CartaHija("Poliwag", "/labpokemon/poliwag.png");
+        cartas[11] = new CartaHija("Staryu", "/labpokemon/staryu.png");
+        cartas[12] = new CartaHija("Seel", "/labpokemon/seel.png");
+        cartas[13] = new CartaHija("Lapras", "/labpokemon/lapras.png");
+        cartas[14] = new CartaHija("Pidgey", "/labpokemon/pidgey.png");
+        cartas[15] = new CartaHija("Spearow", "/labpokemon/spearow.png");
+        cartas[16] = new CartaHija("Zubat", "/labpokemon/zubat.png");
+        cartas[17] = new CartaHija("Hoothoot", "/labpokemon/hoothoot.png");       
 
 
        return cartas;
