@@ -1,35 +1,48 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package labpokemon;
 
-/**
- *
- * @author adria
- */
-public abstract class Carta {
-    protected String contenido;
-    protected boolean descubierta;
+import javax.swing.JButton;
 
-    public abstract void mostrar();
-    public abstract void ocultar();
 
-    public String getContenido() {
-        return contenido;
+public abstract class Carta extends JButton {
+   
+    protected String nombre;
+    protected boolean revelada;
+     
+    public Carta (String nombre){
+        this.nombre=nombre;
+        this.revelada=false;
+        this.setText("?");
+    }
+    
+    public abstract void mostrarCarta();
+    
+    public void ocultarCarta(){
+        this.revelada=false;
+        this.setText("?");
+        this.setBackground(null);
     }
 
-    public boolean isDescubierta() {
-        return descubierta;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setDescubierta(boolean descubierta) {
-        this.descubierta = descubierta;
+    public boolean isRevelada() {
+        return revelada;
     }
+
+    public void setRevelada(boolean revelada) {
+        this.revelada = revelada;
+    }
+    
+    
+    
+    
+     
     
 
 }
