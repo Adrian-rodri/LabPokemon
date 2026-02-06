@@ -58,7 +58,7 @@ public class TableroLogico implements controlarJuego {
                 segundaSeleccion.ocultarCarta();
                 cambiarTurno();
             }
-            // reiniciamos selección
+            
             primeraSeleccion = null;
             segundaSeleccion = null;
         }
