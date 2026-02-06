@@ -10,7 +10,7 @@ public class CartasArreglo {
     public static Carta[] crearCarta(){
         Carta[] cartas = new Carta[18];
         cartas[0] = new CartaHija("Charmander");
-        cartas[1] = new CartaHija("Squirt");
+        cartas[1] = new CartaHija("Squirtle");
         cartas[2] = new CartaHija("Bulbasur");
         cartas[3] = new CartaHija("Pikachu");
         cartas[4] = new CartaHija("Jigglypuff");
