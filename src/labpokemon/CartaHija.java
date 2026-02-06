@@ -8,9 +8,9 @@ public class CartaHija extends Carta{
    
     private ImageIcon imagen;
 
-    public CartaHija(String nombre, String rutaImagen){
+    public CartaHija(String nombre, String nombreArchivo){
         super(nombre);
-        this.imagen = new ImageIcon(getClass().getResource(rutaImagen));
+this.imagen = new ImageIcon(getClass().getResource(nombreArchivo));
     }
     
      
@@ -19,7 +19,8 @@ public class CartaHija extends Carta{
     
     @Override
     public void mostrarCarta(){
-        this.revelada=true;
+        
+        this.setIcon(imagen);
         this.setText(nombre);
     }
     
