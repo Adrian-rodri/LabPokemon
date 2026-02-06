@@ -4,10 +4,7 @@
  */
 package labpokemon;
 
-/**
- *
- * @author adria
- */
+
 public abstract class Carta {
     protected String contenido;
     protected boolean descubierta;
@@ -29,8 +26,6 @@ public abstract class Carta {
 
     public void setDescubierta(boolean descubierta) {
         this.descubierta = descubierta;
-    }
+    }    
     
-
 }
-
