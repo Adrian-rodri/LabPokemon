@@ -9,9 +9,9 @@ package labpokemon;
  * @author gpopo
  */
 public class Jugador {
-    String nombre;
-    boolean turno;
-    int aciertos;
+    private String nombre;
+    private boolean turno;
+    private int aciertos;
     
     public Jugador(String nombre, boolean turno, int aciertos){
         this.nombre = nombre;
@@ -37,5 +37,10 @@ public class Jugador {
     
     public void addAcierto(){
         aciertos++;    
+    }
+    
+    @Override
+    public String toString(){
+        return nombre+"| Aciertos: "+aciertos+"| Turno: "+(turno?"Su turno" : "");
     }
 }

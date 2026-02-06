@@ -4,6 +4,13 @@ package labpokemon;
 import javax.swing.JButton;
 
 
+
+
+
+
+
+
+
 public abstract class Carta extends JButton {
    
     protected String nombre;
@@ -38,12 +45,12 @@ public abstract class Carta extends JButton {
     public void setRevelada(boolean revelada) {
         this.revelada = revelada;
     }
-    
+
+
     
     
     
      
+
     
-
 }
-
