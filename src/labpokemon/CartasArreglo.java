@@ -37,7 +37,7 @@ public class CartasArreglo {
        return cartas;
     }
     
-    public static Carta getCartaRando(){
+    public static Carta getCartaRandom(){
         Carta[] cartas = crearCarta();
          int indice = random.nextInt(cartas.length);
         return cartas[indice];
