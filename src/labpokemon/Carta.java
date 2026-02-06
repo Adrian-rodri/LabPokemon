@@ -1,13 +1,13 @@
 
 package labpokemon;
 
-
-
-public abstract class Carta {
-    protected String contenido;
-    protected boolean descubierta;
-
 import javax.swing.JButton;
+
+
+
+
+
+
 
 
 
@@ -38,11 +38,6 @@ public abstract class Carta extends JButton {
         this.nombre = nombre;
     }
 
-
-    public void setDescubierta(boolean descubierta) {
-        this.descubierta = descubierta;
-    }    
-
     public boolean isRevelada() {
         return revelada;
     }
@@ -50,7 +45,8 @@ public abstract class Carta extends JButton {
     public void setRevelada(boolean revelada) {
         this.revelada = revelada;
     }
-    
+
+
     
     
     
