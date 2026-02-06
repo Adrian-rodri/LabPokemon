@@ -1,15 +1,17 @@
 
 package labpokemon;
 
+import java.util.Random;
+
 /**
  *
  * @author Dell
  */
 public class CartasArreglo {
-    
+   private static Random random = new Random(); 
     public static Carta[] crearCarta(){
         Carta[] cartas = new Carta[18];
-
+    
 
 
         cartas[0] = new CartaHija("Charmander", "charmander.png");
@@ -33,6 +35,14 @@ public class CartasArreglo {
 
 
        return cartas;
-    };
+    }
+    
+    public static Carta getCartaRando(){
+        Carta[] cartas = crearCarta();
+         int indice = random.nextInt(cartas.length);
+        return cartas[indice];
+    }
+    
+    
     
 }
